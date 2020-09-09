@@ -75,7 +75,7 @@ abstract class BaseExcelResponseFactory
             );
 
             $response->headers->set('Content-Disposition', $disposition);
-            $response->headers->set('Content-type', self::MIME_TYPE);
+            $response->headers->set('Content-Type', self::MIME_TYPE);
 
             return $response;
     }
