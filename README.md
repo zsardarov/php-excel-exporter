@@ -55,14 +55,14 @@ class CustomExcelResponseFactory extends BaseExcelResponseFactory
     protected function contentWriter(Writer $writer, iterable $exportable): void
     {
         foreach ($exportable as $item) {
-            $cell = [
+            $cells = [
                 $item->id,
                 $item->category,
                 $item->value,
                 $item->date
             ];
 
-            $row = WriterEntityFactory::createRowFromArray($cell);
+            $row = WriterEntityFactory::createRowFromArray($cells);
             $writer->addRow($row);
         }
     }
